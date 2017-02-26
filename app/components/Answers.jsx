@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class Answers extends Component{
-  render() {
-    return(
-      <div>Answers component</div>
-    )
-  }
-}
+const Answers = (props) => {
+  return (
+    <div>Answers component</div>
+  );
+};
+
+export default Answers;
