@@ -4,7 +4,7 @@ import Question from './Question';
 
 require('axios-base-url')('http://localhost:3001');
 
-class Quiz extends Component {
+export default class Quiz extends Component {
   constructor() {
     super();
     this.state = {
@@ -50,5 +50,3 @@ class Quiz extends Component {
     );
   }
 }
-
-export default Quiz;
