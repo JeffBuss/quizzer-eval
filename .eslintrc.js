@@ -15,8 +15,10 @@ module.exports = {
     "no-multiple-empty-lines": [0],
     "arrow-body-style": [0],
     "no-trailing-spaces": [0],
-    "no-console": [1],
+    "no-console": [0],
     "no-undef": [0],
-    "import/no-extraneous-dependencies": ["error", {"devDependencies": false, "optionalDependencies": false, "peerDependencies": false}]
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": false, "optionalDependencies": false, "peerDependencies": false}],
+    "prefer-stateless-function": [0],
+    "prop-types": [0],
   }
 };

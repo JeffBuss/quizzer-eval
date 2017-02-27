@@ -9,14 +9,13 @@ export default class Question extends Component {
         <h2>{question.title}</h2>
         <section>
           {question.answers.map((answer, index) => {
-            return(
+            return (
               <Answer
                 key={index}
                 id={question.id}
                 answer={answer}
-                score={answer.score}
               />
-            )
+            );
           })}
         </section>
       </main>

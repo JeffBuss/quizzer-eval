@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 
-class Answers extends Component {
+export default class Answers extends Component {
   render() {
-    const { answer, index, id, score } = this.props;
+    const { answer, index, id } = this.props;
     return (
       <form>
         <input
           key={index}
           type="radio"
           name={id}
-          value={score}
           onChange={() => console.log('radio buttons')}
         />
         {answer.title}
@@ -17,5 +16,3 @@ class Answers extends Component {
     );
   }
 }
-
-export default Answers;

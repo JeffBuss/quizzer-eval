@@ -24,7 +24,7 @@ class Quiz extends Component {
       });
     })
     .catch((error) => {
-      console.log('Tman codes fyr backends, u prob fucked up fam');
+      console.log('Tman codes next level backends, u prob fucked up fam');
     });
   }
 
