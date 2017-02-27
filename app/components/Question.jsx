@@ -7,17 +7,18 @@ export default class Question extends Component {
     return (
       <main key={question.id}>
         <h2>{question.title}</h2>
-        <section>
+        <form>
           {question.answers.map((answer, index) => {
             return (
               <Answer
                 key={index}
                 id={question.id}
                 answer={answer}
+                scoreAnswer={this.props.scoreAnswer}
               />
             );
           })}
-        </section>
+        </form>
       </main>
     );
   }

@@ -2,16 +2,17 @@ import React, { Component } from 'react';
 
 export default class Answers extends Component {
   render() {
-    const { answer, index, id } = this.props;
+    const { answer, index, id, score, scoreAnswer } = this.props;
     return (
-      <form>
+      <div>
         <input
           key={index}
           type="radio"
           name={id}
+          onChange={() => scoreAnswer(answer.score, id)}
         />
         {answer.title}
-      </form>
+      </div>
     );
   }
 }

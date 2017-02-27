@@ -9,6 +9,7 @@ export default class Quiz extends Component {
     super();
     this.state = {
       quizzes: [],
+      scoreObj: {},
     };
   }
 
@@ -28,7 +29,16 @@ export default class Quiz extends Component {
     });
   }
 
+  scoreAnswer(score, id) {
+    const total = Object.assign({}, this.state.scoreObj, {[id]: score})
+    this.setState({ scoreObj: total });
+  }
+
   render() {
+    const score = Object.keys(this.state.scoreObj).reduce((sum, id) => {
+      return sum + (this.state.scoreObj[id])
+    }, 0)
+
     return (
       <div>
         <h1>{this.state.quizzes.title}</h1>
@@ -38,10 +48,12 @@ export default class Quiz extends Component {
               <Question
                 question={question}
                 key={question.id}
+                scoreAnswer={(score, id) => this.scoreAnswer(score, id)}
               />
             );
           })
           : <p>Loading questions...</p>}
+          {score}
         <button
           type="submit"
         >Submit
