@@ -9,9 +9,6 @@ class Quiz extends Component {
     super();
     this.state = {
       quizzes: [],
-      selectedAnswer: {},
-      selectedScore: '',
-      answer: '',
     };
   }
 
@@ -31,40 +28,6 @@ class Quiz extends Component {
     });
   }
 
-  fetchScores(e) {
-    axios.post('/scores', {
-      score: this.state.selectedScore
-    })
-    .then((response) => {
-      this.setState({
-        answer: response.data.score,
-      });
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-  }
-
-
-  scoreAnswer(score, index) {
-    let currentAnswerScore = this.state.selectedAnswer;
-    currentAnswerScore[index] = score;
-    this.setState ({
-      selectedScore: score,
-    });
-    this.totalScores(index);
-  };
-
-  totalScores(index) {
-    const { selectedAnswer } = this.state;
-    let total = Object.keys(selectedAnswer).reduce((sum, index) => {
-      return sum + (selectedAnswer[index])
-    }, 0);
-    this.setState({
-      selectedScore: total
-    });
-  };
-
   render() {
     return (
       <div>
@@ -75,17 +38,13 @@ class Quiz extends Component {
               <Question
                 question={question}
                 key={question.id}
-                scoreAnswer={score => this.scoreAnswer(score, index)}
               />
             );
           })
           : <p>Loading questions...</p>}
-
-        {this.state.selectedScore}
-        {this.state.answer}
         <button
           type="submit"
-          onClick={e => this.fetchScores(e)}
+          onClick={() => console.log('submit button does a thing')}
         >Submit
         </button>
       </div>
@@ -93,4 +52,4 @@ class Quiz extends Component {
   }
 }
 
-module.exports = Quiz;
+export default Quiz;

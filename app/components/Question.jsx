@@ -15,9 +15,8 @@ export default class Question extends Component {
                 id={question.id}
                 answer={answer}
                 score={answer.score}
-                scoreAnswer={this.props.scoreAnswer}
               />
-            );
+            )
           })}
         </section>
       </main>
