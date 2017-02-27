@@ -1,18 +1,12 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import Quiz from './Quiz';
 
-import Answers from './Answers';
-import Question from './Question';
-import QuestionList from './QuestionList';
+const App = () => {
+  return (
+    <div>
+      <Quiz />
+    </div>
+  );
+};
 
-export default class App extends Component {
-  render() {
-    return (
-      <div>App component
-        <Answers />
-        <Question />
-        <QuestionList />
-      </div>
-    );
-  }
-}
+export default App;

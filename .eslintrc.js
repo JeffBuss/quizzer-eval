@@ -8,6 +8,7 @@ module.exports = {
     "rules": {
     "quotes": [2, "single"],
     "eol-last": [0],
+    "array-callback-return": [0],
     "no-mixed-requires": [0],
     "no-underscore-dangle": [0],
     "no-unused-vars": [0],
