@@ -1,23 +1,15 @@
 {
-  "name": "clandesdine",
+  "name": "quizzer",
   "version": "1.0.0",
-  "description": "ClandesDine",
+  "description": "Quizzer Eval",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dashboard -- webpack-dev-server --hot --content-base",
     "build": "webpack"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JeffBuss/clandesdine.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JeffBuss/clandesdine/issues"
-  },
-  "homepage": "https://github.com/JeffBuss/clandesdine#readme",
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-core": "^6.23.1",
