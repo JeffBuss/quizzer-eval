@@ -44,7 +44,6 @@ class Quiz extends Component {
           : <p>Loading questions...</p>}
         <button
           type="submit"
-          onClick={() => console.log('submit button does a thing')}
         >Submit
         </button>
       </div>

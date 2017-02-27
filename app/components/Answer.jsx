@@ -9,7 +9,6 @@ export default class Answers extends Component {
           key={index}
           type="radio"
           name={id}
-          onChange={() => console.log('radio buttons')}
         />
         {answer.title}
       </form>
