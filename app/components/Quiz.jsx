@@ -40,11 +40,11 @@ export default class Quiz extends Component {
     });
   }
 
-  totalScores(index) {
+  totalScores(id) {
     const total = this.state.scoreObj.reduce((sum, value, id) => {
       return sum + (this.state.scoreObj[id]);
     }, 0);
-    this.setState({ totalScore: total});
+    this.setState({ totalScore: total });
   }
 
   scoreAnswer(score, id) {
