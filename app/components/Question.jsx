@@ -14,7 +14,6 @@ export default class Question extends Component {
                 key={index}
                 id={question.id}
                 answer={answer}
-                scoreAnswer={this.props.scoreAnswer}
               />
             );
           })}
