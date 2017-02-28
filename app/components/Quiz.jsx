@@ -36,13 +36,13 @@ export default class Quiz extends Component {
       score: this.state.totalScore,
     })
     .then((response) => {
-      this.setState({ textResponse: response.data.score })
+      this.setState({ textResponse: response.data.score });
     });
   }
 
   totalScores(index) {
-    const total = this.state.selectedAnswer.reduce((sum, value, index) => {
-      return sum + (this.state.selectedAnswer[index]);
+    const total = this.state.scoreObj.reduce((sum, value, id) => {
+      return sum + (this.state.scoreObj[id]);
     }, 0);
     this.setState({ totalScore: total});
   }
