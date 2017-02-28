@@ -9,6 +9,7 @@ export default class Quiz extends Component {
     super();
     this.state = {
       quizzes: [],
+      scoreObj: {},
     };
   }
 
@@ -28,6 +29,14 @@ export default class Quiz extends Component {
     });
   }
 
+  postScore(e) {
+    console.log('postScore');
+  }
+
+  scoreAnswer(score, id) {
+    
+  }
+
   render() {
     return (
       <div>
@@ -38,13 +47,14 @@ export default class Quiz extends Component {
               <Question
                 question={question}
                 key={question.id}
+                scoreAnswer={(score, id) => this.scoreAnswer(score, id)}
               />
             );
           })
           : <p>Loading questions...</p>}
         <button
           type="submit"
-          onClick={() => console.log('submit')}
+          onClick={(e) => this.postScore(e)}
         >Submit
         </button>
       </div>
